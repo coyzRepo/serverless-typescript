@@ -2,7 +2,7 @@
 import jwt from "jsonwebtoken";
 import differenceInHours from "date-fns/differenceInHours";
 
-export default class TodoServerice {
+export default class UserService {
     static jwtVerify(token: string, privateKey: string): Record<string, any> {
         return jwt.verify(token, privateKey);
     }
@@ -16,6 +16,7 @@ export default class TodoServerice {
     }
 
     static createToken(username: string, password: string, dateCreated: Number, privateKey: string): string {
+        
         const data = {  
             username,
             password,

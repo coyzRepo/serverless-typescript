@@ -1,5 +1,5 @@
 import type { AWS } from '@serverless/typescript';
-import { createToken, checkUser } from '@functions/todo';
+import { createToken, checkUser } from '@functions/users';
 const serverlessConfiguration: AWS = {
   service: 'aws-serverless-typescript-api',
   frameworkVersion: '3',

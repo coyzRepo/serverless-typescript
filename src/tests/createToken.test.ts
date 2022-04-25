@@ -1,4 +1,4 @@
-import todosService from "../service";
+import UserService from "../service";
 
 
 const username = "TestUsername";
@@ -7,5 +7,5 @@ const dateCreated = Date.now();
 const privateKey = "TestPrivateKey";
 
 test('Should generate token', () => {
-    expect(todosService.createToken( username, password, dateCreated, privateKey)).toBeDefined();
+    expect(UserService.createToken( username, password, dateCreated, privateKey)).toBeDefined();
 });
